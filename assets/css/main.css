@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: rgb(255, 255, 255);
+		background: #fff;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -98,7 +98,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: rgb(92, 89, 89);
+		color: #888;
 		font-family: "Lato", sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -121,7 +121,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: rgb(93, 91, 91);
+		color: #777;
 		font-weight: 700;
 	}
 
@@ -134,7 +134,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: rgb(79, 77, 77);
+		color: #777;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
