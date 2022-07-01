@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fff;
+		background: rgb(0, 0, 0);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1867,7 +1867,7 @@ input, select, textarea {
 		}
 
 		select:focus::-ms-value {
-			background-color: transparent;
+			background-color: inherit;
 		}
 
 		select::-ms-expand {
@@ -1928,7 +1928,7 @@ input, select, textarea {
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				background: #fafafa;
+				background: #000000;
 				border-radius: 5px;
 				border: solid 2px #e4e4e4;
 				content: '';
@@ -2402,7 +2402,7 @@ input, select, textarea {
 			}
 
 			ul.feature-icons li:before {
-				background: #4acaa8;
+				background: #000000;
 				border-radius: 100%;
 				color: #ffffff;
 				display: block;
@@ -2455,7 +2455,7 @@ input, select, textarea {
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: #fafafa;
+				background-color: #000000;
 			}
 
 		table td {
@@ -2807,7 +2807,7 @@ input, select, textarea {
 					}
 
 						#header > nav ul li a.active {
-							background: #fff;
+							background: rgb(0, 0, 0);
 							color: #4acaa8 !important;
 						}
 
@@ -2818,7 +2818,7 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		background: #fff;
+		background: rgb(6, 4, 4);
 		padding-right: 23em;
 	}
 
