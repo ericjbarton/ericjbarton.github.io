@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
-	line-height: 1;
+	line-height: ;
 }
 
 ol, ul {
@@ -185,7 +185,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 2px #f4f4f4;
+		border-bottom: solid 2px #000000;
 		margin: 2.25em 0;
 	}
 
@@ -203,7 +203,7 @@ input, select, textarea {
 	code {
 		background: #555;
 		border-radius: 5px;
-		color: #fff;
+		color: rgb(0, 0, 0);
 		font-family: "Source Code Pro", monospace;
 		font-size: 0.9em;
 		margin: 0 0.25em;
@@ -1826,7 +1826,7 @@ input, select, textarea {
 		appearance: none;
 		border-radius: 5px;
 		border: none;
-		border: solid 2px #e4e4e4;
+		border: solid 2px #000000;
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -1992,7 +1992,7 @@ input, select, textarea {
 
 	.box {
 		border-radius: 5px;
-		border: solid 2px #e4e4e4;
+		border: solid 2px #000000;
 		margin-bottom: 2.25em;
 		padding: 1.5em;
 	}
@@ -2449,7 +2449,7 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border: solid 2px #f4f4f4;
+			border: solid 2px #000000;
 			border-left: 0;
 			border-right: 0;
 		}
