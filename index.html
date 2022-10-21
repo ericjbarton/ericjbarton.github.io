@@ -14,15 +14,85 @@
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
     <a href="dogs.html">Dogs</a>
-   
-  <h5 style="font-size: 5vw">The Internet Home of</h5>
- <h1><strong>ERIC BARTON</strong></h1>
- <h6>Very much a work in progress, but already much improved from the old one. </h6>
+    
+    <h5 style="font-size: 5vw">The Internet Home of</h5>
+    <h1><strong>ERIC BARTON</strong></h1>
+    <h6>Very much a work in progress, but already much improved from the old one. </h6>
+    
+    <p>I've decided, for some reason, to scrap my old template site for something I've built from the ground up with my own 10 fingers. There's no better way to learn than to do it yourself, right? I have SOME regrets.</p>
+    
+  </body>
+  <body onload="startGame()">
+  <script>
 
- <p>I've decided, for some reason, to scrap my old template site for something I've built from the ground up with my own 10 fingers. There's no better way to learn than to do it yourself, right? I have SOME regrets.</p>
- 
-</body>
+  var myGamePiece;
+  
+  function startGame() {
+      myGamePiece = new component(30, 30, "red", 80, 75);
+      myGameArea.start();
+  }
+  
+  var myGameArea = {
+      canvas : document.createElement("canvas"),
+      start : function() {
+          this.canvas.width = 1000;
+          this.canvas.height = 1000;
+          this.context = this.canvas.getContext("2d");
+          document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+          this.interval = setInterval(updateGameArea, 20);        
+      },
+      stop : function() {
+          clearInterval(this.interval);
+      },    
+      clear : function() {
+          this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      }
+  }
+  
+  function component(width, height, color, x, y, type) {
+      this.type = type;
+      this.width = width;
+      this.height = height;
+      this.x = x;
+      this.y = y;    
+      this.speedX = 1;
+      this.speedY = 1;    
+      this.gravity = 0.01;
+      this.gravitySpeed = 5;
+      this.bounce = .75;
+      this.update = function() {
+          ctx = myGameArea.context;
+          ctx.fillStyle = color;
+          ctx.fillRect(this.x, this.y, this.width, this.height);
+      }
+      this.newPos = function() {
+          this.gravitySpeed += this.gravity;
+          this.x += this.speedX;
+          this.y += this.speedY + this.gravitySpeed;
+          this.hitBottom();
+      }
+      this.hitBottom = function() {
+          var rockbottom = myGameArea.canvas.height - this.height;
+          if (this.y > rockbottom) {
+              this.y = rockbottom;
+              this.gravitySpeed = -(this.gravitySpeed * this.bounce);
+          }
+      }
+  }
+  
+  function updateGameArea() {
+      myGameArea.clear();
+      myGamePiece.newPos();
+      myGamePiece.update();
+  }
+  
+  </script>
+  
 <style>
+  canvas {
+    border:1px solid #d3d3d3;
+    background-color: transparent;
+}
   body {
     background-color:black;
     background-repeat: no-repeat;
