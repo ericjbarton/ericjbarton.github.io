@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="topnav" id="myTopnav">
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <a href="dogs.html">Dogs</a>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="dogs.html">Dogs</a></li>
+    </ul>
     
     <h5 style="font-size: 5vw">The Internet Home of</h5>
     <h1><strong>ERIC BARTON</strong></h1>
@@ -88,7 +89,29 @@
   
   </script>
   
-<style>
+<style>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(255, 0, 0);
+}
   body {
     background-color:black;
     background-repeat: no-repeat;
